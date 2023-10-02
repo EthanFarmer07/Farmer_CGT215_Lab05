@@ -1,21 +1,28 @@
 // Farmer_CGT215_Lab05.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// This program is for changing a user entered string, character by character (including white space), given what the characters need to be changed into.
 
 #include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+/* Eventual function for swapping characters within user submited string.
+void Swap(vector<char>& normalCharVector) {
+    char t(normalCharVector[0]);
+}
+*/
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::cout << "Changes for git pushing.\n";
+    // Sets a variable for getting a user inputed string (including the whitespaces).
+    string userString;
+    /* Unused set of vectors for character conversion.
+    vector<char> normalCharVector({ 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' });
+    vector<char> cypherCharVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
+    */
+
+    getline(cin, userString);
+    cout << userString;
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
