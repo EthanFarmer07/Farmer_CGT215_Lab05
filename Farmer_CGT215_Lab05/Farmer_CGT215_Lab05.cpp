@@ -22,7 +22,11 @@ int main()
     vector<char> cypherCharVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
     */
 
+    // Message for user to know program needs input and grabing the users input.
+    cout << "Enter text to encrypt: ";
     getline(cin, userString);
-    cout << userString;
+
+    // Outputing the users input but it is now encoded.
+    cout << "Encoded Message: " << userString;
 
 }
