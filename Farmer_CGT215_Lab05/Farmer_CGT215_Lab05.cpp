@@ -7,18 +7,16 @@
 
 using namespace std;
 
-/* Eventual function for swapping characters within user submited string.
-void cipher(vector<char>& normalCharVector) {
-    char t(normalCharVector[0]);
-}
-*/
+// Eventual function for swapping characters within user submited string.
+void cipher() {
 
-int main()
-{
+}
+
+int main() {
     // Sets a variable for getting a user inputed string (including the whitespaces).
     string userString;
     // Set of vectors for character conversion.
-    vector<char> cypherCharVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
+    vector<char> cipherCharVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
 
     // Message for user to know program needs input and grabing the users input.
     cout << "Enter a string (up to 128 characters) to encrypt: ";
