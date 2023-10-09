@@ -8,19 +8,19 @@
 using namespace std;
 
 // A vector for character encryption.
-vector<char> cipherCharVector({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
+vector<char> cipherEncryptionKey({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
 
 // Function for swapping characters within user submited string.
-char cipher(char enteredString, vector<char> encryptingKey) {
-    if ((enteredString >= 65) && (enteredString <= 90)) {
+char cipherEncryption(char enteredString, vector<char> encryptingKey) {
+    if ((enteredString >= 65) && (enteredString <= 90)) { // Checks to see if the letter is capital.
         return encryptingKey.at(enteredString - 65);
     }
-    else if ((enteredString >= 97) && (enteredString <= 122)) {
-        char upperCaseLetter = enteredString - 32;
-        char upperCaseCode = encryptingKey.at(upperCaseLetter - 65);
+    else if ((enteredString >= 97) && (enteredString <= 122)) { // Checks to see if the letter is lowercase.
+        char upperCaseLetter = enteredString - 32; // This will convert the letter to uppercase.
+        char upperCaseCode = encryptingKey.at(upperCaseLetter - 65); 
         return upperCaseCode + 32;
     }
-    else {
+    else { // Retuns whatever the character is knowing it is not a letter. 
         return enteredString;
     }
 }
@@ -36,7 +36,7 @@ int main() {
     // Outputing the users input but it is now encoded.
     cout << "Encoded Message: ";
     for (int i = 0; i < userString.size(); i++) {
-        cout << cipher(userString.at(i), cipherCharVector);
+        cout << cipherEncryption(userString.at(i), cipherEncryptionKey);
     }
 
 }
